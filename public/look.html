@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter une destination</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 800px;
+      }
+      .form-container h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+      .form-group label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #555;
+      }
+      .form-group input,
+      .form-group textarea {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      .form-group button {
+        padding: 10px 20px;
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .form-group button:hover {
+        background-color: #141414;
+      }
+      .message {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+      .message.success {
+        color: #28a745;
+      }
+      .message.error {
+        color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Ajouter une destination</h2>
+      <form id="destination-form">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" placeholder="Paris" required />
+        </div>
+        <div class="form-group">
+          <label for="pays">Pays</label>
+          <input type="text" id="pays" placeholder="France" required />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            placeholder="Décrivez la destination"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="budget">Budget</label>
+          <input type="number" id="budget" placeholder="1200" required />
+        </div>
+        <div class="form-group">
+          <button type="submit">Obtenir des recommandations</button>
+        </div>
+      </form>
+      <div id="reponseIA" class="message"></div>
+    </div>
+
+    <script>
+      const API_KEY =
+        "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"; // Remplacez par votre clé API
+      const IA_URL = "https://api.openai.com/v1/chat/completions"; // Exemple avec OpenAI
+
+      document
+        .getElementById("destination-form")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const nom = document.getElementById("nom").value.trim();
+          const pays = document.getElementById("pays").value.trim();
+          const description = document
+            .getElementById("description")
+            .value.trim();
+          const budget = document.getElementById("budget").value.trim();
+
+          const prompt = `Je cherche une destination de voyage. Voici les informations: 
+        Nom: ${nom}, 
+        Pays: ${pays}, 
+        Description: ${description}, 
+        Budget: ${budget} euros. 
+        Que me recommandez-vous?`;
+
+          try {
+            const response = await fetch(IA_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${API_KEY}`,
+              },
+              body: JSON.stringify({
+                model: "gpt-3.5-turbo", // Remplacez par le modèle que vous utilisez
+                messages: [{ role: "user", content: prompt }],
+                max_tokens: 200,
+              }),
+            });
+
+            const data = await response.json();
+            document.getElementById("reponseIA").textContent =
+              data.choices[0].message.content;
+            document.getElementById("reponseIA").className = "message success";
+          } catch (error) {
+            document.getElementById("reponseIA").textContent =
+              "Erreur lors de la récupération des recommandations.";
+            document.getElementById("reponseIA").className = "message error";
+          }
+        });
+    </script>
+  </body>
+</html>

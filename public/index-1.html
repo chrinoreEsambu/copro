@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tours</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Your description" />
+    <meta name="keywords" content="Your keywords" />
+    <meta name="author" content="Your name" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="jsfront/infouser.js"></script>
+    <!--[if lt IE 8]>
+      <div style="clear: both; text-align: center; position: relative">
+        <a
+          href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"
+        >
+          <img
+            src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg"
+            border="0"
+            height="42"
+            width="820"
+            alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."
+          />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css" />
+    <![endif]-->
+  </head>
+  <body id="page2">
+    <!--==============================header=================================-->
+    <header>
+      <div class="head-box1">
+        <div class="main">
+          <nav>
+            <ul class="sf-menu">
+              <li><a href="index.html">home</a></li>
+              <li><a class="active" href="index-1.html">tours</a></li>
+              <li>
+                <a href="index-2.html">destinations</a>
+                <ul>
+                  <li><a href="more.html">Myrtle Beach</a></li>
+                  <li>
+                    <a href="more.html">Aruba</a>
+                    <ul>
+                      <li><a href="more.html">Caribbean</a></li>
+                      <li><a href="more.html">Cabo San Lucas</a></li>
+                      <li><a href="more.html">Multi-Locations</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="more.html">Florida</a></li>
+                  <li><a href="more.html">Hawaii</a></li>
+                  <li><a href="more.html">Cancun</a></li>
+                </ul>
+              </li>
+              <li><a href="index-3.html">hotels</a></li>
+              <li><a href="index-4.html">car rental</a></li>
+              <li class="last1"><a href="index-5.html">contacts</a></li>
+              <li class="last2"></li>
+              <div id="user-info">
+                <p style="color: white">
+                  Bienvenue, <span id="username"></span> !
+                </p>
+              </div>
+              <button id="logout-button" class="deconecct">Déconnexion</button>
+            </ul>
+            
+          </nav>
+          <h1><a class="logo" href="index.html">Horizon</a></h1>
+        </div>
+      </div>
+      <div class="head-box2">
+        <div class="head-box3">
+          <figure class="page-img">
+            <img src="images/page2-img1.jpg" alt="" />
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <!--==============================content================================-->
+    <section id="content">
+      <div class="main">
+        <div class="container_24">
+          <div class="wrapper border-bot">
+            <article class="grid_6 suffix_2">
+              <h4 class="p12">Browse Tours</h4>
+              <div class="page2-box1">
+                <span class="text9">Browse by Tour Operator</span>
+                <form id="form2" class="jqtransform" method="get">
+                  <div class="inner3">
+                    <select name="adult1">
+                      <option>Browse by Tour Operator</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                    </select>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+                  <h4 class="p12">Search Tours</h4>
+                  <div class="inner4">
+                    <span class="text9">Destination:</span>
+                    <select name="adult2">
+                      <option>Any destination</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                    </select>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="inner4">
+                    <span class="text9">Departing:</span>
+                    <select name="adult3">
+                      <option>Any departing</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                    </select>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="inner4">
+                    <span class="text9">Price:</span>
+                    <select name="adult4">
+                      <option>Any price</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                    </select>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="inner4 p13">
+                    <span class="text9">Duration:</span>
+                    <select name="adult5">
+                      <option>Any duration</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                      <option>&nbsp;</option>
+                    </select>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+                  <a
+                    onClick="document.getElementById('form2').submit()"
+                    class="link3 fright"
+                    >search</a
+                  >
+                  <div class="clear"></div>
+                </form>
+              </div>
+              <div class="page1-box2 last1 p14">
+                <span class="text3">Need Help <br />Booking Tours?</span>
+                <span class="text10">0-123-456-789</span>
+              </div>
+            </article>
+            <h4 class="p9 p12">Tour specials</h4>
+            <div class="car-wrapper">
+              <div class="carousel1">
+                <ul>
+                  <li>
+                    <article class="grid_8">
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img2.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">North America</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html"
+                          >More North America tours</a
+                        >
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img3.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Oceania</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Oceania tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img4.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Hawaii</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Hawaii tours</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="grid_8">
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img5.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">prague</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More prague tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img6.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Europe</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Europe tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img7.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Thailand</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html"
+                          >More Thailand tours</a
+                        >
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="grid_8">
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img2.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">North America</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html"
+                          >More North America tours</a
+                        >
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img3.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Oceania</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Oceania tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img4.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Hawaii</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Hawaii tours</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="grid_8">
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img5.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">prague</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More prague tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img6.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Europe</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Europe tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img7.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Thailand</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html"
+                          >More Thailand tours</a
+                        >
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="grid_8">
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img2.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">North America</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html"
+                          >More North America tours</a
+                        >
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img3.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Oceania</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Oceania tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img4.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Hawaii</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Hawaii tours</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="grid_8">
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img5.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">prague</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More prague tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img6.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Europe</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html">More Europe tours</a>
+                      </div>
+                      <div class="page2-box2">
+                        <figure class="page2-img2">
+                          <img src="images/page2-img7.jpg" alt="" />
+                        </figure>
+                        <div class="extra-wrap">
+                          <span class="text11">Thailand</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $458</span>
+                          <span class="text12">Praesent vestibulum </span>
+                          <span class="text13">from $358</span>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="link4" href="more.html"
+                          >More Thailand tours</a
+                        >
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+              <a class="prev1 car-button" data-type="prevPage"></a>
+              <a class="next1 car-button" data-type="nextPage"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==============================footer=================================-->
+    <footer>
+      <div class="main">
+        <div class="container_24">
+          <div class="wrapper">
+            <article class="grid_4">
+              <div class="foot-page1">
+                <span>Horizon</span> &copy; 2012
+                <a href="index-6.html">Privacy Policy </a>
+                <div class="clear"></div>
+              </div>
+            </article>
+            <article class="grid_4 push_4">
+              <div class="foot-page2">
+                <span>USA - LOS ANGELES</span>
+                <span>901 East E Street</span>
+                <span>Wilmington, CA 90744</span>
+              </div>
+            </article>
+            <article class="grid_5 push_5">
+              <div class="foot-page2">
+                <span>E -mail: <a href="more.html">mail@demolink.org</a></span>
+                <span>Phone: +1-310-8304522</span>
+                <span>Fax: +1-310-8304522</span>
+              </div>
+            </article>
+            <article class="grid_3 push_8">
+              <ul class="soc-links">
+                <li><a class="soc-link1" href="#"></a></li>
+                <li><a class="soc-link2" href="#"></a></li>
+                <li><a class="soc-link3" href="#"></a></li>
+                <li class="last1"><a class="soc-link4" href="#"></a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
